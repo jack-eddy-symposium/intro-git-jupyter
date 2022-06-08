@@ -4,7 +4,7 @@ parts:
 - caption: Git
   chapters:
   - file: intro-git/Git-Tutorial
-#  - file: intro-git/git-visuals
+  - file: intro-git/git-visuals
 - caption: Jupyter
   chapters:
   - file: intro-jupyter/Index

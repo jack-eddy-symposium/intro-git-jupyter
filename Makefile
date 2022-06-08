@@ -6,9 +6,16 @@ conf.py: _config.yml _toc.yml
 
 html-hub: conf.py
 	sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
-	@echo "Start the Python http server and visit:"
-	@echo "https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html"
+	@echo "Start the Python http server to access the build."
+	@echo "To do so, open a new terminal, and paste the following line in it:"
+	@echo 
+	@echo cd "${PWD}/_build/html && python -m http.server"
+	@echo 
+	@echo "Then, visit this URL in a new tab of your browser:"
+	@echo "https://jackeddy.2i2c.cloud/user-redirect/proxy/8000/index.html"
+
 
 .PHONY: clean
 clean:
 	rm -rf _build/html/
+    

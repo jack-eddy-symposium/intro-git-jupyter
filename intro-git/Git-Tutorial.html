@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -225,7 +225,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/intro-git/Git-Tutorial.ipynb"
+        <a href="https://mybinder.org/v2/gh/jack-eddy-symposium/intro-git-jupyter/master?urlpath=tree/intro-git/Git-Tutorial.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -259,6 +259,68 @@ title="Fullscreen mode"
   </span>
 
 </button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jack-eddy-symposium/intro-git-jupyter"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jack-eddy-symposium/intro-git-jupyter/issues/new?title=Issue%20on%20page%20%2Fintro-git/Git-Tutorial.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jack-eddy-symposium/intro-git-jupyter/edit/master/intro-git/Git-Tutorial.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -953,12 +1015,12 @@ information stored as computer files.</strong>”</p>
 <section id="first-things-first-git-must-be-configured-before-first-use">
 <h2>First things first: git must be configured before first use<a class="headerlink" href="#first-things-first-git-must-be-configured-before-first-use" title="Permalink to this headline">#</a></h2>
 <p>The minimal amount of configuration for git to work without pestering you is to tell it who you are. You should run a version of these commands in your shell:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Fernando Perez&quot;</span>
-git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.edu&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Fernando Perez&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;Fernando.Perez@berkeley.edu&quot;</span>
 </pre></div>
 </div>
 <p>And while we’re at it, we also turn on the use of color, which is very useful</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global color.ui <span class="s2">&quot;auto&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>color.ui<span class="w"> </span><span class="s2">&quot;auto&quot;</span>
 </pre></div>
 </div>
 <section id="convenient-credentials-management">
@@ -967,7 +1029,7 @@ git config --global user.email <span class="s2">&quot;Fernando.Perez@berkeley.ed
 <p>For general users, Github offers in its help pages instructions on how to configure the credentials helper for <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac">Mac OSX</a>, <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac">Windows</a> and <a class="reference external" href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-linux">Linux</a>.</p>
 <p>But in this document we will focus on configuring the <a class="reference external" href="https://github.com/yuvipanda/github-app-user-auth">github app for JupyterHub</a> developed by Berkeley’s Yuvi Panda. Our JupyterHub already has this app pre-installed, which makes it very convenient to push and pull securely from selected repositories.</p>
 <p>You will need to run this command, which adds the credentials information to the file <code class="docutils literal notranslate"><span class="pre">~/.gitconfig.local</span></code>, which we load from <code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span></code> to store local information that may be different across systems (since we’ll be managing the global <code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span></code> file through a fairly generic public git repository):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config -f <span class="nv">$HOME</span>/.gitconfig.local credential.helper <span class="s2">&quot;store --file=/tmp/github-app-git-credentials&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>-f<span class="w"> </span><span class="nv">$HOME</span>/.gitconfig.local<span class="w"> </span>credential.helper<span class="w"> </span><span class="s2">&quot;store --file=/tmp/github-app-git-credentials&quot;</span>
 </pre></div>
 </div>
 <p>And then, follow these steps, which you’ll need to do again each time you log into the Hub and want to push/pull to/from GitHub:</p>
@@ -2040,7 +2102,7 @@ line <code class="docutils literal notranslate"><span class="pre">\input{revisio
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./intro-git"
         },
         predefinedOutput: true
